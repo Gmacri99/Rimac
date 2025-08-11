@@ -1,0 +1,78 @@
+/*Variables*/
+
+$columns:12;
+$side-margin: clamp(.8rem, 8vw, 120px);
+$container-width: calc(100vw - (#{$side-margin} * 2));
+$space-columns:1rem;
+
+@font-face {
+  font-family: "Sonoma";
+  src: url("./fonts/Sonoma/BRSonoma-Regular-BF654c45266c042.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sonoma";
+  src: url("./fonts/Sonoma/BRSonoma-SemiBold-BF654c45268c340.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/*breakpoints responsive*/
+
+$breakpoints: (
+  smx:360px,   
+  sm: 600px,   
+  md: 768px,   
+  lg: 992px,   
+  xl: 1360px,  
+  xxl: 1900px,  
+);
+
+/*Clases y estilos repetitivos y/o globales*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    max-width: 100vw;
+    overflow-x: clip;
+    font-size: calc(10 * (100vw / 1920));
+}
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxContainer{
+    width: $container-width;
+}
+
+/*logica para la generación de columnas*/
+
+@function col-width($cols) {
+  @return calc((100% / $columns) * $cols);
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: calc( (100% / #{$columns}) * #{$i} );
+  }
+}
+
+@each $break, $size in $breakpoints {
+  @media (min-width: $size) {
+    @for $i from 1 through $columns {
+      .col-#{$break}-#{$i} {
+        width: col-width($i);
+      }
+    }
+  }
+}
