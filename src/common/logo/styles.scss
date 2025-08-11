@@ -1,7 +1,19 @@
 .svgContainer {
   svg {
-    width: 85.4px;
-    height: 42px;
+    width: 73.19px;
+    height: 36px;
     display: flex;
   }
+}
+
+@media screen and (max-width:992px) {
+
+    .svgContainer{
+
+        svg {
+          width: 65.05px;
+          height: 32px;
+        }
+    }
+
 }
