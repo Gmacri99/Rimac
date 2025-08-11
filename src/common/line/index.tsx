@@ -5,7 +5,7 @@ type Props = {
   svg:JSX.Element | null
 }
 
-export const Line=({svg}:Props)=> {
+export const Line=()=> {
 
   return (
     <>
