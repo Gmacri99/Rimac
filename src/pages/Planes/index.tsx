@@ -7,7 +7,7 @@ export const Planes=()=> {
 
   return (
     <>
-
+      
     </>
   )
 }

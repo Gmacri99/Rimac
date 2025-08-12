@@ -1,5 +1,4 @@
 import { Modal } from '../../common/modal'
-import { renderIconSpan } from '../../helpers/funciones'
 import { useFormularioUsuario } from '../../hooks/useHandleForm'
 import { useAuthRedirect } from '../../hooks/useRedirect'
 import { SeguroCabecera } from './InfoSeguro/cabecera'

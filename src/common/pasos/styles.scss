@@ -1,0 +1,78 @@
+.shadowContainer{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+.modalContainer{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: .5rem;
+  gap: 1rem;
+  min-width: 120px;
+  padding: 0rem 3.2rem;
+  transition: all .5s ease;
+  height: 60px;
+  background-color: #e4e5e9;
+  p{
+    font-family: Lato;
+    font-weight: 500;
+    font-style: Light;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    text-align: center;
+  }
+
+  span{
+
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+
+    svg{
+      width: 65%;
+      height: 65%;
+      
+    }
+  }
+}
+
+.modalContainer--error{
+    box-shadow:  0 1px 16px #FF1C44, 0 0 4px 1px #8d0c24;
+
+    span{
+      background-color: #FF1C44;
+    }
+}
+
+.modalContainer--active{
+    transform: translate(-50%,-50%);
+}
+
+.modalContainer--inactive{
+    transform: translate(-50%,-50vh);
+}
+
+.shadowContainer--inactive{
+  z-index: -2;
+  opacity: 0;
+}
+
+.shadowContainer--active{
+  z-index: 2;
+  opacity: 1;
+}
+
+.modalContainer--success{
+    box-shadow:  0 1px 4px #09d61a, 0 0 20px 2px #066e0f;
+
+      span{
+      background-color: #09d61a;
+    }
+}
