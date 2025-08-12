@@ -58,6 +58,7 @@
     border: 1px solid #5E6488;
     max-width: 352px;
     width: 100%;
+
     select{
         width: 100%;
         padding: 16px;
@@ -69,6 +70,7 @@
         leading-trim: NONE;
         line-height: 24px;
         letter-spacing: 0px;
+        cursor: pointer;
         outline: none;
         border: none;
         appearance: none;
@@ -88,9 +90,11 @@
     position: relative;
     background-color: transparent;
     border-right: 1px solid black;
+
     svg{
         position: absolute;
         right: 16px;
+        z-index: -1;
         top: 46.5%;
         transform: translateY(-50%);
     }
@@ -167,7 +171,21 @@
     input::placeholder{
         color: #5E6488;
     }
+
+
 }
+
+.FormSeguro__containerTelefono--error {
+    outline: none;
+    border-color: #FF1C44;
+    box-shadow: inset 0 1px 4px #8d0c24, 0 0 20px 2px #FF1C44;
+}   
+
+.FormSeguro__containerTelefono--selected {
+    outline: none;
+    border-color: #09d61a;
+    box-shadow: inset 0 1px 4px #066e0f, 0 0 20px 2px #09d61a;
+}   
 
 .FormSeguro__link{
     font-family: 'Sonoma';
@@ -185,18 +203,25 @@
     color: #03050F;
 }
 
+.FormSeguro__link:hover{
+    transform: scale(1.1);
+}
+
 .FormSeguro__button{
     font-family: 'Sonoma';
     font-weight: 700;
     font-style: Bold;
+    overflow: hidden;
     font-size: 20px;
     leading-trim: NONE;
     height: 64px;
+    position: relative;
     border-radius: 40px;
     padding: 20px 40px;
     line-height: 24px;
     letter-spacing: 0.4px;
     text-align: center;
+    width: 195px;
     cursor: pointer;
     transition: all .5s ease;
     border: none;
@@ -204,8 +229,48 @@
 
 .FormSeguro__button--dark{
     background: #03050F;
+    border: 2px solid #03050f;
     color:#FFF;
 }
+
+.FormSeguro__button__spanInactive{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,150%);
+    width: 100%;
+    transition: all .5s ease;
+    z-index: 2;
+    opacity: 0;
+    color: #03050F;
+}
+
+
+.FormSeguro__button__spanActive{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .5s ease;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 2;
+}
+
+.FormSeguro__button--dark:hover{
+        background: #FFF;
+}
+
+.FormSeguro__button:hover .FormSeguro__button__spanActive{
+        transform: translate(-50%,-250%);
+        opacity: 0;
+}
+
+
+.FormSeguro__button:hover .FormSeguro__button__spanInactive{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+}
+
 
 .FormSeguro__containerCheck{
     gap: 12px;
@@ -217,6 +282,7 @@
         padding: 2px;
         border: 2px solid #0A051E;
         transition: all .5s ease;
+        cursor: pointer;
         
         svg{
             width: 11.16px;

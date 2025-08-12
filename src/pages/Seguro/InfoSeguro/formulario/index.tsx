@@ -1,55 +1,50 @@
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import './styles.scss'
 import { renderIconSpan } from '../../../../helpers/funciones'
-import { useState } from 'react'
+import { useFormularioUsuario } from '../../../../hooks/useHandleForm'
+
+
 
 export const FormularioSeguro=()=> {
 
-    const [comunicaciones,setComunicaciones] = useState<boolean>(false)
-    const [privacidad,setPrivacidad] = useState<boolean>(false)
+  
+    const {formData,valid,focus,comunicaciones,privacidad,handleChange,handleCheck,onSubmit,setFocus,}=useFormularioUsuario()
 
-    const handleChange = (event:React.MouseEvent<HTMLButtonElement>,name:string) => {
-      event.preventDefault()
-      switch (name) {
-        case 'comunicaciones':
-          setComunicaciones(prev => !prev);
-        break;
-        case 'privacidad':
-          setPrivacidad(prev => !prev);
-        break;
-      }
-    }
+    
+
 
   return (
-    <form className='FormSeguro'>
-
+    <form className='FormSeguro' onSubmit={onSubmit}>
       <div className='FormSeguro__containerIdentificacion flexCenter'>
         <div className='FormSeguro__containerIdentificacion__containerSelect flexCenter'>
-          <select name="" id="">
+          <select name="tipoDocumento" value={formData.tipoDocumento} onChange={handleChange}>
             <option value="DNI">DNI</option>
             <option value="RUC">RUC</option>
           </select>
           {renderIconSpan('SelectDropdown')}
         </div>
-        <div className='FormSeguro__containerSelect__containerInput flexCenter'>
-          <label htmlFor="Celular">Nro. de documento</label>
-          <input name='Celular' placeholder='5130216147' type="text" />
+        <div className={`FormSeguro__containerSelect__containerInput flexCenter ${focus.nroDocumento && valid.nroDocumento ? 'FormSeguro__containerTelefono--selected' : ''} ${focus.nroDocumento && !valid.nroDocumento ? 'FormSeguro__containerTelefono--error' : ''}`}>
+          <label htmlFor="nroDocumento">Nro. de documento</label>
+          <input name='nroDocumento' placeholder='30216147' type="text" value={formData.nroDocumento} onChange={handleChange} onFocus={() => setFocus((prev) => ({ ...prev, nroDocumento: true }))} onBlur={() => setFocus((prev) => ({ ...prev, nroDocumento: false }))}/>
         </div>
       </div>
-      <div className='FormSeguro__containerTelefono flexCenter'>
-        <label htmlFor="Celular">Celular</label>
-        <input name='Celular' placeholder='5130216147' type="text" />
+      <div   className={`FormSeguro__containerTelefono flexCenter ${focus.celular && valid.celular ? 'FormSeguro__containerTelefono--selected' : ''} ${focus.celular && !valid.celular ? 'FormSeguro__containerTelefono--error' : ''}`}>
+        <label htmlFor="celular">Celular</label>
+        <input name='celular' placeholder='5130216147' type="text" value={formData.celular} onChange={handleChange} onFocus={() => setFocus((prev) => ({ ...prev, celular: true }))} onBlur={() => setFocus((prev) => ({ ...prev, celular: false }))}/>
       </div>
       <div className='FormSeguro__containerCheck flexCenter'>
-        <button onClick={(e)=>handleChange(e,'privacidad')} className={`flexCenter ${privacidad ? 'FormSeguro__containerCheck--activeBtn' : 'FormSeguro__containerCheck--inactiveBtn'}`}>{renderIconSpan('CheckedSvg')}</button>
+        <button onClick={(e)=>handleCheck(e,'privacidad')} className={`flexCenter ${privacidad ? 'FormSeguro__containerCheck--activeBtn' : 'FormSeguro__containerCheck--inactiveBtn'}`}>{renderIconSpan('CheckedSvg')}</button>
         <p>Acepto lo Política de Privacidad</p>
       </div>
       <div className='FormSeguro__containerCheck flexCenter'>
-        <button onClick={(e)=>handleChange(e,'comunicaciones')} className={`flexCenter ${comunicaciones ? 'FormSeguro__containerCheck--activeBtn' : 'FormSeguro__containerCheck--inactiveBtn'}`}>{renderIconSpan('CheckedSvg')}</button>
+        <button onClick={(e)=>handleCheck(e,'comunicaciones')} className={`flexCenter ${comunicaciones ? 'FormSeguro__containerCheck--activeBtn' : 'FormSeguro__containerCheck--inactiveBtn'}`}>{renderIconSpan('CheckedSvg')}</button>
         <p>Acepto la Política Comunicaciones Comerciales</p>
       </div>
       <Link className='FormSeguro__link' target='_blank' to='/terminos'>Aplican Términos y Condiciones.</Link>
-      <button className='FormSeguro__button FormSeguro__button--dark'>Cotiza aquí</button>
+      <button onClick={onSubmit} className='FormSeguro__button FormSeguro__button--dark'>
+        <span className='FormSeguro__button__spanInactive'>Cotiza aquí</span>
+        <span className='FormSeguro__button__spanActive'>Cotiza aquí</span>
+      </button>
     </form>
   )
 }

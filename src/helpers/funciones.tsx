@@ -9,3 +9,4 @@ export const renderIconSpan = (targetName: string, items: ElementSvg[] = SvgItem
 
   return <>{foundItem.svg}</>;
 }
+

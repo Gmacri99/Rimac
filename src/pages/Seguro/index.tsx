@@ -1,3 +1,7 @@
+import { Modal } from '../../common/modal'
+import { renderIconSpan } from '../../helpers/funciones'
+import { useFormularioUsuario } from '../../hooks/useHandleForm'
+import { useAuthRedirect } from '../../hooks/useRedirect'
 import { SeguroCabecera } from './InfoSeguro/cabecera'
 import { FormularioSeguro } from './InfoSeguro/formulario'
 import './styles.scss'
@@ -6,6 +10,13 @@ import gradient from '/blur-asset.png'
 import gradientBlue from '/molecule-blur-asset.png'
 
 export const Seguro=()=> {
+  
+  useAuthRedirect();
+
+  const {modalState}=useFormularioUsuario()
+
+  
+  
 
   return (
     <>
@@ -26,6 +37,8 @@ export const Seguro=()=> {
           </div>
         </div>
       </div>
+
+      <Modal state={modalState==='success' ? true : modalState==='error' ? false : false} active={modalState === 'inactive' ? false : true}/>
     </>
   )
 }
