@@ -2,7 +2,6 @@
 
 $columns:12;
 $side-margin: clamp(.8rem, 8vw, 120px);
-$container-width: calc(100vw - (#{$side-margin} * 2));
 $space-columns:1rem;
 
 @font-face {
@@ -19,6 +18,12 @@ $space-columns:1rem;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Sonoma";
+  src: url("./fonts/Sonoma/BRSonoma-Bold-BF654c4526823f5.otf");
+  font-weight: 700;
+  font-style: normal;
+}
 
 /*breakpoints responsive*/
 
@@ -39,6 +44,11 @@ $breakpoints: (
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
+
 body,html{
     max-width: 100vw;
     overflow-x: clip;
@@ -52,7 +62,7 @@ body,html{
 }
 
 .boxContainer{
-    width: $container-width;
+    max-width:calc(1360px - (#{$side-margin} * 2));
 }
 
 /*logica para la generación de columnas*/
@@ -63,7 +73,7 @@ body,html{
 
 @for $i from 1 through $columns {
   .col-#{$i} {
-    width: calc( (100% / #{$columns}) * #{$i} );
+    max-width: calc( (100% / #{$columns}) * #{$i} );
   }
 }
 
@@ -71,8 +81,14 @@ body,html{
   @media (min-width: $size) {
     @for $i from 1 through $columns {
       .col-#{$break}-#{$i} {
-        width: col-width($i);
+        max-width: col-width($i);
       }
     }
   }
+}
+
+@media screen and (max-width:1260px) {
+  .boxContainer{
+    max-width: calc(100vw - (#{$side-margin} * 2));;
+}
 }

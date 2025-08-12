@@ -1,6 +1,6 @@
 import { Outlet, Route, Routes } from 'react-router-dom'
 import './App.scss'
-import { Home } from './pages/Seguro'
+import { Seguro } from './pages/Seguro'
 import { Planes } from './pages/Planes'
 import { Resumen } from './pages/Resumen'
 import { Terminos } from './pages/Terminos'
@@ -13,16 +13,15 @@ function App() {
     <>
 
     <Navbar/>
-    <Outlet/>
-    <Footer/>
 
      <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Seguro />} />
         <Route path="/planes" element={<Planes />} />
         <Route path="/resumen" element={<Resumen />} />
         <Route path="/terminos" element={<Terminos />} />
       </Routes>
 
+    <Footer/>
     </>
   )
 }

@@ -1,4 +1,7 @@
 .Line{
+
+  width: 100%;
+
   span{
   height: 1px;
   width: 100%;
@@ -9,4 +12,8 @@
 
 .boxContainer--morado{
   background-color: #2b304e;
+}
+
+.boxContainer--gris{
+  background-color: #CCD1EE;
 }

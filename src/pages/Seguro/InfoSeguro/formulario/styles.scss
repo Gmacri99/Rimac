@@ -1,0 +1,267 @@
+.FormSeguro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.FormSeguro__containerTelefono{
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #5E6488;
+    max-width: 352px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 12px;
+    
+    label{
+        height: 16px;
+        width: 90%;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0px;
+        vertical-align: bottom;
+        color: #5E6488;
+    }
+
+    input{
+        height: 24px;
+        width: 90%;
+        outline: none;
+        background-color: transparent;
+        color: #03050F;
+        border: none;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+    }
+
+    input::placeholder{
+        color: #5E6488;
+    }
+}
+
+.FormSeguro__containerIdentificacion{
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #5E6488;
+    max-width: 352px;
+    width: 100%;
+    select{
+        width: 100%;
+        padding: 16px;
+        height: 100%;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0px;
+        outline: none;
+        border: none;
+        appearance: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 8px;
+        background-image: none;
+    }
+
+
+}
+
+.FormSeguro__containerIdentificacion__containerSelect{
+    height: 100%;
+    width: 140px;
+    position: relative;
+    background-color: transparent;
+    border-right: 1px solid black;
+    svg{
+        position: absolute;
+        right: 16px;
+        top: 46.5%;
+        transform: translateY(-50%);
+    }
+
+        label{
+        height: 16px;
+        width: 90%;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0px;
+        vertical-align: bottom;
+        color: #5E6488;
+    }
+
+    input{
+        height: 24px;
+        width: 90%;
+        outline: none;
+        color: #03050F;
+        border: none;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+    }
+}
+
+.FormSeguro__containerSelect__containerInput{
+    flex-grow: 1;
+    height: 100%;
+    flex-direction: column;
+    padding: 8px 16px;
+
+
+        label{
+        height: 16px;
+        width: 90%;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0px;
+        vertical-align: bottom;
+        color: #5E6488;
+    }
+
+    input{
+        height: 24px;
+        width: 90%;
+        outline: none;
+        color: #03050F;
+        border: none;
+        font-family: 'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        background-color: transparent;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+    }
+
+    input::placeholder{
+        color: #5E6488;
+    }
+}
+
+.FormSeguro__link{
+    font-family: 'Sonoma';
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 12px;
+    margin-top: 12px;
+    leading-trim: NONE;
+    margin-bottom: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #03050F;
+}
+
+.FormSeguro__button{
+    font-family: 'Sonoma';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    leading-trim: NONE;
+    height: 64px;
+    border-radius: 40px;
+    padding: 20px 40px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: none;
+}
+
+.FormSeguro__button--dark{
+    background: #03050F;
+    color:#FFF;
+}
+
+.FormSeguro__containerCheck{
+    gap: 12px;
+
+    button{
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        padding: 2px;
+        border: 2px solid #0A051E;
+        transition: all .5s ease;
+        
+        svg{
+            width: 11.16px;
+            height: 8.87px;
+            transition: all .5s ease;
+        }
+    }
+
+    p{
+        font-family:'Sonoma';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        vertical-align: middle;
+        color: #0A051E;
+    }
+}
+
+.FormSeguro__containerCheck--activeBtn{
+    background-color:#0A051E;
+
+    svg{
+        opacity: 1;
+    }
+}
+
+.FormSeguro__containerCheck--inactiveBtn{
+    background-color:transparent;
+
+    svg{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .FormSeguro__button{
+        width: 100%;
+        max-width: 336px;
+        height: 56px;
+    }
+
+
+
+}
