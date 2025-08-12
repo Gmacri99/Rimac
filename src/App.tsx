@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.scss'
 import { Seguro } from './pages/Seguro'
 import { Planes } from './pages/Planes'
