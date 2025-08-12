@@ -3,9 +3,12 @@ import { SvgItems, type ElementSvg } from '../../assets/svg/ListaSvg'
 
 import './styles.scss'
 import { Logo } from '../../common/logo';
-import { ParagraphFooter } from './paragraph';
+import { useScreenSize } from '../../hooks/useScreen';
+import { Line } from '../../common/line';
 
 export const Footer=()=> {
+
+  const { width } = useScreenSize();
 
   function renderIconSpan(items: ElementSvg[],  targetName: string): JSX.Element | null {
 
@@ -20,8 +23,9 @@ export const Footer=()=> {
     <>
         <footer className="flexCenter col-12">
           <div className="boxContainer footerContainer">
-            <Logo svg={renderIconSpan(SvgItems,'LogoWhite')}/>  
-            <ParagraphFooter/>
+            <Logo svg={renderIconSpan(SvgItems, width > 992 ? 'LogoWhite' : 'LogoWhiteMobile')} component='footer'/>  
+            {width < 992 ? <Line color='morado'/> : null}
+            <p>© 2023 RIMAC Seguros y Reaseguros.</p>
           </div>
         </footer>
     </>

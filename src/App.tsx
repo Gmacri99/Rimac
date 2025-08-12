@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 import './App.scss'
 import { Home } from './pages/Seguro'
 import { Planes } from './pages/Planes'
@@ -13,13 +13,16 @@ function App() {
     <>
 
     <Navbar/>
+    <Outlet/>
     <Footer/>
+
      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/planes" element={<Planes />} />
         <Route path="/resumen" element={<Resumen />} />
         <Route path="/terminos" element={<Terminos />} />
       </Routes>
+
     </>
   )
 }

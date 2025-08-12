@@ -1,4 +1,12 @@
-.svgContainer {
+.svgContainer--footer {
+  svg {
+    width: 85.39px;
+    height: 42px;
+    display: flex;
+  }
+}
+
+.svgContainer--navbar {
   svg {
     width: 73.19px;
     height: 36px;
@@ -6,14 +14,24 @@
   }
 }
 
+
 @media screen and (max-width:992px) {
 
-    .svgContainer{
+    .svgContainer--navbar{
 
         svg {
           width: 65.05px;
           height: 32px;
         }
+    }
+
+    .svgContainer--footer{
+
+      svg {
+        width: 138px;
+        height: 20px;
+      }
+
     }
 
 }

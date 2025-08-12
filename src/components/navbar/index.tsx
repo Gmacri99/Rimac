@@ -18,7 +18,7 @@ export const Navbar=()=> {
   return (
       <nav className="flexCenter col-12">
         <div className='boxContainer containerNav'>
-          <Logo svg={renderIconSpan(SvgItems,'LogoRed')}/>  
+          <Logo svg={renderIconSpan(SvgItems,'LogoRed') } component='navbar'/>  
           <Contact/>  
         </div>
       </nav>
