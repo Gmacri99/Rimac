@@ -1,4 +1,3 @@
-import type { JSX } from 'react'
 import './styles.scss'
 import { renderIconSpan } from '../../helpers/funciones'
 

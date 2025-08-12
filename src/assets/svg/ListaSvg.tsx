@@ -90,6 +90,33 @@ export const SvgItems:ElementSvg[] = [
         </svg>
       ),
     },
+    {
+      name:'PasoSvg',
+      svg:
+      (
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1" y1="11.5" x2="31" y2="11.5" stroke="#4F4FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 8"/>
+        </svg>
+      ),
+    },
+    {
+      name:'BackSvgRosa',
+      svg:
+      (
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.97146 9.90369L3.06396 5.99994L6.97146 2.09619L8.02897 3.15369L5.18647 5.99994L8.02897 8.84619L6.97146 9.90369Z" fill="#A9AFD9"/>
+        </svg>
+      ),
+    },
+    {
+      name:'BackSvgMorado',
+      svg:
+      (
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.55317 4.99995L5.80942 1.74683L6.69067 2.62808L4.32192 4.99995L6.69067 7.37183L5.80942 8.25308L2.55317 4.99995Z" fill="#4F4FFF"/>
+        </svg>
+      ),
+    },
 ]
 
 

@@ -1,0 +1,42 @@
+.btnBack{
+  transition: all .5s ease;
+  border-radius: 100%;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  gap: 8px;
+  vertical-align: middle;
+  color: #4F4FFF;
+  background: transparent;
+
+  span{
+    width: 20px;
+    height: 20px;
+  }
+  
+  svg{
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.btnBack:hover{
+  scale: 1.1;
+}
+
+.btnBack--BackSvgMorado{
+  border: 2px solid #4F4FFF;
+  color: #4F4FFF;
+}
+
+.btnBack--BackSvgRosa{
+  border:2px solid #A9AFD9;
+  color: #A9AFD9;
+}

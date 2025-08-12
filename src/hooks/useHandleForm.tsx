@@ -6,10 +6,9 @@ import { regexCelular, regexDocumento } from "../pages/Seguro/InfoSeguro/formula
 import { validarCampos, validarUsuario } from "../pages/Seguro/InfoSeguro/formulario/logica/validaciones";
 import { Usuario } from "../const/user";
 import { apiRequest } from "../helpers/ApiRequest";
-import { Modal } from "../common/modal";
 
 export const useFormularioUsuario = () => {
-    const { data, setData, modalState, setModalState } = useDataContext();
+    const { setData, modalState, setModalState } = useDataContext();
     const navigate = useNavigate();
     const [comunicaciones,setComunicaciones] = useState<boolean>(false)
     const [privacidad,setPrivacidad] = useState<boolean>(false)

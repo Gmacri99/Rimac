@@ -10,3 +10,12 @@ export const renderIconSpan = (targetName: string, items: ElementSvg[] = SvgItem
   return <>{foundItem.svg}</>;
 }
 
+export const capitalizeFirst = (palabra: string): string => {
+  if (!palabra) return '';
+  return palabra.charAt(0).toUpperCase() + palabra.slice(1);
+};
+
+export const toLowerCaseAll = (palabra: string): string => {
+  if (!palabra) return '';
+  return palabra.toLowerCase();
+};
