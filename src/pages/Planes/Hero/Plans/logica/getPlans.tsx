@@ -14,7 +14,7 @@ export const Planes = async (): Promise<Plan[]> => {
     if (Array.isArray(lista)) {
       return lista.slice(0, 20);
     } else {
-      console.warn('La respuesta no es un arreglo, se devuelve arreglo vacío');
+      console.error('Error al obtener planes');
       return [];
     }
   } catch (error) {

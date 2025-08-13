@@ -14,7 +14,7 @@ precio:number
 }
 
 export const CardResumen=({name,lastName,DNI,type,typeDocument,celular,plan,precio}:Props)=> {
-  console.log(type)
+
   return (
   <div className='Card CardResumen flexCenter'>
     <div className='CardResumen__containerInfo flexCenter'>
