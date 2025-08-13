@@ -106,8 +106,18 @@
 
 
 .pageSeguro{
-  height: calc(115vh - 106px);
-  max-height: 115vh;
+  height: calc(100vh - 106px);
+  min-height: 650px;
+}
+
+.containerSeguro__figureSeguro{
+    height: 80%;
+    max-height: 560px;
+}
+
+.containerSeguro{
+    height: 100%;
+    max-height: 640px;
 }
 
 }
