@@ -1,0 +1,14 @@
+[
+    {
+    "id":1,
+    "type":"Personal",
+    "name": "Para mi",
+    "texto": "Cotiza tu seguro de salud y agrega familiares si así lo deseas."
+    },
+    {
+    "id":2,
+    "type":"Regalo",
+    "name": "Para alguien más",
+    "texto": "Realiza una cotización para uno de tus familiares o cualquier persona."
+    }
+]

@@ -1,12 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import { renderIconSpan } from '../../helpers/funciones'
 import { BtnBack } from '../btnBack'
 import './styles.scss'
+import { useRedirect } from '../../hooks/useRedirect'
 
 type Props = {
   pasoNumber:number,
 }
 
 export const Pasos=({pasoNumber}:Props)=> {
+
+  const { logout, redirectPlan } = useRedirect();
 
   return (
     <div className='flexCenter col-12 Container--bg'>
@@ -22,7 +26,7 @@ export const Pasos=({pasoNumber}:Props)=> {
           </div>
       </div>
       <div className='boxContainer PasosContainerMobile flexCenter'>
-        <BtnBack name='BackSvgRosa'/>
+        <BtnBack onClick={pasoNumber===1 ? logout : redirectPlan} name='BackSvgRosa'/>
         <p>paso {pasoNumber} de 2</p>
         <div><span className={`${pasoNumber === 1 ? 'PasosContainerMobile__span--10' : 'PasosContainerMobile__span--100'}`}></span></div>
       </div>

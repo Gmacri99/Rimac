@@ -11,8 +11,8 @@
   top: 10%;
   left: 50%;
   transform: translate(-50%,-50%);
-  border-radius: .5rem;
-  gap: 1rem;
+  border-radius: 12px;
+  gap: 1.25rem;
   min-width: 120px;
   padding: 0rem 3.2rem;
   transition: all .5s ease;
@@ -75,4 +75,13 @@
       span{
       background-color: #09d61a;
     }
+}
+
+@media screen and (max-width:840px){
+  .modalContainer{
+    top: 15%;
+    padding: 0px 3px;
+    gap: 10px;
+    width: 240px;
+  }
 }

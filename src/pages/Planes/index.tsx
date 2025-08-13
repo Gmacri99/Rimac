@@ -1,5 +1,5 @@
 import { Pasos } from "../../common/pasos";
-import { useAuthRedirect } from "../../hooks/useRedirect";
+import { useAuthRedirect } from "../../hooks/useAuthRedirect";
 import { HeroPlan } from "./Hero";
 import './styles.scss'
 

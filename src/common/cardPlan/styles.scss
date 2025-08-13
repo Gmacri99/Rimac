@@ -1,0 +1,159 @@
+.CardPlan{
+    max-width:288px;
+    height: 687px;
+    width: 100%;
+    flex-direction: column;
+    padding: 68px 32px 48px 32px;
+}
+
+.CardPlan__containerHeader{
+    max-height: 182px;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.CardPlan__containerInfo{
+    height: 90%;
+}
+
+.CardPlan__containerHeader__containerTitle{
+    display: flex;
+    width: 100%;
+}
+
+
+.CardPlan__containerHeader__containerText{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+    height: fit-content;
+
+    h3{
+        font-family: Lato;
+        font-weight: 900;
+        color: #141938;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+    }
+
+    h6{
+        font-family: Lato;
+        font-weight: 900;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #7981B2;
+    }
+}
+
+.CardPlan__containerHeader__price{
+    font-family: Lato;
+    font-weight: 900;
+    color: #141938;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+}
+
+.CardPlan__containerHeader__priceDiscount{
+    font-family: Lato;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    text-decoration: line-through;
+    color: #7981B2;
+
+}
+
+.CardPlan__containerHeader__containerPrice{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.CardPlan__containerItems{
+    padding-top: 20px;
+    width: 100%;
+    gap: 24px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style-position: inside;
+
+    li{
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Bold;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+        color: #141938;
+    }
+}
+
+.CardPlan__containerRecommended{
+    background: #7DF0BA;
+    color: #141938;
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    vertical-align: middle;
+    min-width: 122px;
+    height: 20px;
+    border-radius: 6px;
+    padding: 2px 8px;
+    position: absolute;
+    top: 38px;
+}
+
+.CardPlan--containerButton{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    button{
+        background-color: #FF1C44;
+        border:3px solid #FF1C44;
+        border-radius: 32px;
+        font-family: Lato;
+        font-weight: 700;
+        font-style: Bold;
+        width: 100%;
+        font-size: 18px;
+        leading-trim: NONE;
+        cursor: pointer;
+        height: 48px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #FFFFFF;
+        transition: all .5s ease;
+    }
+
+    button:hover{
+        color: #FF1C44;
+        background-color: #FFFFFF;
+    }
+}

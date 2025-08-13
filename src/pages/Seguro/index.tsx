@@ -1,6 +1,6 @@
 import { Modal } from '../../common/modal'
 import { useFormularioUsuario } from '../../hooks/useHandleForm'
-import { useAuthRedirect } from '../../hooks/useRedirect'
+import { useAuthRedirect } from '../../hooks/useAuthRedirect'
 import { SeguroCabecera } from './InfoSeguro/cabecera'
 import { FormularioSeguro } from './InfoSeguro/formulario'
 import './styles.scss'

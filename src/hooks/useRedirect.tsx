@@ -1,22 +1,20 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDataContext } from "../context/context";
 
-export const useAuthRedirect = (
-  key: string = "Usuario",    
-  rutaLogueado: string = "/planes", 
-  rutaNoLogueado: string = "/" 
-) => {
+export const useRedirect = () => {
   const navigate = useNavigate();
+  const {setData,setOption}=useDataContext()
 
-  useEffect(() => {
-    const usuario = localStorage.getItem(key);
+  const logout = () => {
+    localStorage.removeItem("Usuario");
+    setOption(undefined)
+    setData(null)
+    navigate("/");
+  };
 
-    if (usuario) {
+  const redirectPlan = () => {
+    navigate("/planes");
+  };
 
-      navigate(rutaLogueado, { replace: true });
-    } else {
-
-      navigate(rutaNoLogueado, { replace: true });
-    }
-  }, [key, rutaLogueado, rutaNoLogueado, navigate]);
+  return { logout, redirectPlan };
 };

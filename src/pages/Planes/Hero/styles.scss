@@ -1,11 +1,18 @@
 .heroPlan{
-    height: 100vh;
     width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 64px;
+    flex-direction: column;
+    gap: 32px;
+    align-items: start;
+    justify-content: flex-end;
 }
+
+
 
 .heroPlan__containerButton{
     width: 100%;
-    height: 10%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,9 +20,9 @@
 
 .heroPlan__containerText{
     width: 100%;
-    height: 25%;
     flex-direction: column;
     gap: 8px;
+    margin-top: 30px;
 
     h2{
         font-family: Lato;
@@ -42,6 +49,13 @@
     }
 }
 
+.heroPlan__containerCards{
+    width: 100%;
+    gap:40px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
 
 @media screen and (max-width:840px) {
 
@@ -49,13 +63,18 @@
         display: none;
 }
 
+.heroPlan{
+    margin-top: 20px;
+    gap: 16px;
+}
+
+
 .heroPlan__containerText{
     width: 100%;
-    height: 25%;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-
+    margin-top: 0px;
     h2{
         font-size: 28px;
         line-height: 36px;
@@ -67,5 +86,11 @@
     h6{
         text-align: left;
     }
+
 }
+   .heroPlan__containerCards{
+        gap:16px;
+        justify-content: flex-start;
+        margin-top: 0px;
+    }
 }

@@ -65,6 +65,12 @@ body,html{
     max-width:calc(1360px - (#{$side-margin} * 2));
 }
 
+.Card{
+  box-shadow: 0px 1px 32px 0px #AEACF359;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+
 /*logica para la generación de columnas*/
 
 @function col-width($cols) {
