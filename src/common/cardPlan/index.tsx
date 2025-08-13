@@ -37,8 +37,8 @@ export const CardPlan=({title,price,typeOption,type,items}:Props)=> {
           <h3>{title}</h3>
           <div className='CardPlan__containerHeader__containerPrice'>
             <h6>Costo del plan</h6>
-            {toLowerCaseAll(typeOption)==='regalo' ? <p className='CardPlan__containerHeader__priceDiscount'>${aplicarDescuento(price)} antes</p> : null}
-            <p className='CardPlan__containerHeader__price'>${price} al mes</p>
+            {toLowerCaseAll(typeOption)==='regalo' ? <p className='CardPlan__containerHeader__priceDiscount'>${price} antes</p> : null}
+            <p className='CardPlan__containerHeader__price'>${toLowerCaseAll(typeOption)!=='regalo' ? price : aplicarDescuento(price)} al mes</p>
           </div>
         </div>
         <div>
