@@ -40,7 +40,7 @@ export const FormularioSeguro=()=> {
         <button onClick={(e)=>handleCheck(e,'comunicaciones')} className={`flexCenter ${comunicaciones ? 'FormSeguro__containerCheck--activeBtn' : 'FormSeguro__containerCheck--inactiveBtn'}`}>{renderIconSpan('CheckedSvg')}</button>
         <p>Acepto la Política Comunicaciones Comerciales</p>
       </div>
-      <Link className='FormSeguro__link' to='/terminos'>Aplican Términos y Condiciones.</Link>
+      <Link className='FormSeguro__link' target='_blank' to='/terminos'>Aplican Términos y Condiciones.</Link>
       <button onClick={onSubmit} className='FormSeguro__button FormSeguro__button--dark'>
         <span className='FormSeguro__button__spanInactive'>Cotiza aquí</span>
         <span className='FormSeguro__button__spanActive'>Cotiza aquí</span>
