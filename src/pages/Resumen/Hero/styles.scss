@@ -2,11 +2,19 @@ main{
     background-color:#FAFBFF ;
 }
 
+.heroResumen__containerButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .heroResumen{
     width: 100%;
     height: fit-content;
     display: flex;
     margin-top: 64px;
+    margin-left: 5%;
     flex-direction: column;
     gap: 32px;
     align-items: start;
