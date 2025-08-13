@@ -1,0 +1,42 @@
+.TerminosSection{
+    margin-top: 13.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+    h1{
+        font-family: Lato;
+        font-weight: 700;
+        font-size: clamp(32px,3.8vw,4.2rem);
+        leading-trim: NONE;
+        margin-top: 20px;
+        line-height: 100%;
+        letter-spacing: -0.6px;
+        margin-bottom: 12px;
+    }
+
+    h2{
+        font-family: Lato;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 22px;
+        leading-trim: NONE;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+        vertical-align: middle;
+    }
+
+    p{
+        font-family: Lato;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        vertical-align: middle;
+    }
+}
