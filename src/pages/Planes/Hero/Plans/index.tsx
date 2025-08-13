@@ -2,20 +2,18 @@
 import { useEffect, useState } from 'react'
 import { CardPlan } from '../../../../common/cardPlan'
 import { useDataContext } from '../../../../context/context'
-import './styles.scss'
-import 'swiper/css'
 import { Planes, type Plan } from './logica/getPlans'
 import { calcularEdad, contieneClinica } from '../../../../helpers/funciones'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation} from 'swiper/modules'
 import { BtnBack } from '../../../../common/btnBack'
-
+import './styles.scss'
+import 'swiper/css'
 
 
 export const PlanSection=()=> {
   
   const {data,option}=useDataContext()
-
   const [optionsPlan, setOptionsPlan] = useState<Plan[]>([])
   const [current, setCurrent] = useState<number>(1);
 
