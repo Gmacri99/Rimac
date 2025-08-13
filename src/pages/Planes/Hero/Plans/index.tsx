@@ -9,11 +9,10 @@ import { Navigation} from 'swiper/modules'
 import { BtnBack } from '../../../../common/btnBack'
 import './styles.scss'
 import 'swiper/css'
-import { useScreenSize } from '../../../../hooks/useScreen'
 
 
 export const PlanSection=()=> {
-  const {width} = useScreenSize()
+  
   const {data,option}=useDataContext()
   const [optionsPlan, setOptionsPlan] = useState<Plan[]>([])
   const [current, setCurrent] = useState<number>(1);
@@ -49,7 +48,7 @@ export const PlanSection=()=> {
           }}
           onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
           pagination={{ clickable: true }}
-          loop={width > 840 ? true : false}
+          loop={ true}
           className="boxContainer"
           breakpoints={{
             0: {         
