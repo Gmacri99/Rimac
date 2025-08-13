@@ -9,10 +9,11 @@ import { Navigation} from 'swiper/modules'
 import { BtnBack } from '../../../../common/btnBack'
 import './styles.scss'
 import 'swiper/css'
+import { useScreenSize } from '../../../../hooks/useScreen'
 
 
 export const PlanSection=()=> {
-  
+  const {width} = useScreenSize()
   const {data,option}=useDataContext()
   const [optionsPlan, setOptionsPlan] = useState<Plan[]>([])
   const [current, setCurrent] = useState<number>(1);
@@ -42,20 +43,19 @@ export const PlanSection=()=> {
         <Swiper
           modules={[Navigation]}
           spaceBetween={20}
-          slidesPerView={3}
           navigation={{
             prevEl: ".custom-prev",
             nextEl: ".custom-next",
           }}
           onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
           pagination={{ clickable: true }}
-          loop={true}
+          loop={width > 840 ? true : false}
           className="boxContainer"
           breakpoints={{
             0: {         
               slidesPerView: 1,
             },
-            1040: {      
+            1090: {      
               slidesPerView: 3,
             },
           }}
