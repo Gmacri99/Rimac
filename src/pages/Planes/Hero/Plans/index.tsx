@@ -7,7 +7,7 @@ import 'swiper/css'
 import { Planes, type Plan } from './logica/getPlans'
 import { calcularEdad, contieneClinica } from '../../../../helpers/funciones'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation} from 'swiper/modules'
 import { BtnBack } from '../../../../common/btnBack'
 
 

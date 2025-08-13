@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import { renderIconSpan } from '../../helpers/funciones'
 import { BtnBack } from '../btnBack'
 import './styles.scss'

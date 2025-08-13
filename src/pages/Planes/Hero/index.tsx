@@ -5,7 +5,6 @@ import { capitalizeFirst} from '../../../helpers/funciones'
 import './styles.scss'
 import Options from '../../../const/CardOptions.json';
 import { PlanSection } from './Plans'
-import { useNavigate } from 'react-router-dom'
 import { useRedirect } from '../../../hooks/useRedirect'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'

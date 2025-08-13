@@ -9,7 +9,7 @@ import { useAuthRedirect } from "../../../hooks/useAuthRedirect";
 
 export const HeroResumen=()=> {
 
-  const {data,option,setOption,selectedPlan}=useDataContext()
+  const {data,selectedPlan}=useDataContext()
 
   const {redirectPlan} = useRedirect();
   
