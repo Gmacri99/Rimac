@@ -65,6 +65,16 @@ body,html{
     max-width:calc(1360px - (#{$side-margin} * 2));
 }
 
+.HeroSection{
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
 .Card{
   box-shadow: 0px 1px 32px 0px #AEACF359;
   background: #FFFFFF;

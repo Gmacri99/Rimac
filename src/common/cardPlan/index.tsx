@@ -1,6 +1,8 @@
 import './styles.scss'
 import { aplicarDescuento, renderIconSpan, toLowerCaseAll } from '../../helpers/funciones';
 import { Line } from '../linea';
+import { useDataContext, type PlanSelected } from '../../context/context';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
 title:string,
@@ -11,6 +13,19 @@ items:string[]
 }
 
 export const CardPlan=({title,price,typeOption,type,items}:Props)=> {
+
+  const {setSelectedPlan}=useDataContext()
+  const navigate= useNavigate()
+
+  const handleClick = () =>{
+    const plan:PlanSelected = {
+      name:title,
+      price:price,
+      type:typeOption,
+    }
+    setSelectedPlan(plan)
+    navigate('/resumen')
+  }
 
   return (
   <div className='Card CardPlan flexCenter'>
@@ -37,7 +52,7 @@ export const CardPlan=({title,price,typeOption,type,items}:Props)=> {
       </ul>
     </div>
     <div className='CardPlan--containerButton '>
-      <button>Seleccionar Plan</button>
+      <button onClick={handleClick}>Seleccionar Plan</button>
     </div>
   </div>
   )

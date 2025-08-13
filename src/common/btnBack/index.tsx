@@ -8,7 +8,7 @@ type Props = {
   onClick?: () => void;
 }
 
-export const BtnBack=({name, text, clase,onClick}:Props)=> {
+export const BtnBack=({name, text, clase='',onClick}:Props)=> {
 
   return (
     <>

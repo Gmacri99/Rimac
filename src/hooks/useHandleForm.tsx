@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useDataContext } from "../context/context";
+import { useDataContext, type ApiResponse } from "../context/context";
 import { useEffect, useState } from "react";
 import type { DatosUsuario, InputState } from "../pages/Seguro/InfoSeguro/formulario/logica/interfaces";
 import { regexCelular, regexDocumento } from "../pages/Seguro/InfoSeguro/formulario/logica/Regex";
@@ -88,7 +88,15 @@ export const useFormularioUsuario = () => {
 
       try {
         const response = await apiRequest('getUser');
-        setData(response);
+        const dataResponse:ApiResponse={
+            birthDay: response.birthDay,
+            lastName: response.lastName,
+            name: response.name,
+            TipoDocumento: formData.tipoDocumento,
+            NroDocumento: formData.nroDocumento.toString(),
+            celular: '+51' + formData.celular
+        }
+        setData(dataResponse);
       
         setModalState('success');
 
